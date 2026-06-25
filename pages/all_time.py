@@ -25,15 +25,16 @@ df = df.sort_values("Win%", ascending=False).reset_index(drop=True)
 df.index += 1
 
 # ── Session history (W-L per session per player) ──────────────────────────────
+# Scores read directly from Excel via openpyxl (date-formatted cells decoded as M-D = wins-losses)
 sessions_raw = {
-    "Player":      ["Mahdi", "Ningwa", "Borgers", "Nathan", "Kanetho", "Renick", "Ashwin", "Clinton", "Savio", "Cameron"],
-    "29/05/26":    ["3-3", "2-4", "4-2", "3-3", "5-1", "1-5", None,    None,    None,    None],
-    "09/06/26":    ["1-3", "4-0", "2-2", "0-4", None,    "3-1", "0-4", "4-0", "2-2", None],
-    "14/06/26":    ["1-4", "3-2", "1-4", "4-1", None,    None,  "3-2", "1-4", None,  "3-2"],
-    "13/06/26":    [None,  "1-3", "3-1", None,  "2-2", "2-2",  None,  "3-1", None,  "1-3"],
-    "15/06/26":    ["2-2", "1-3", "3-1", "3-1", "2-2", "1-3",  None,  None,  None,  None],
-    "18/06/26":    ["0-2", "2-0", "1-1", "2-0", "1-1",  "0-2", "0-2", None,  None,  None],
-    "22/06/26":    ["0-2", "0-2", "2-0", None,  "2-0", None,  "2-0", "0-2", None,  "0-2"],
+    "Player":      ["Mahdi", "Ningwa", "Borgers", "Nathan", "Kanetho", "Renick", "Ashwin", "Clinton", "Savio", "Cameron", "Aben", "Pter", "Oliver", "Paras", "Tristan"],
+    "29/05/26":    ["3-3",  "2-4",  "4-2",  "3-3",  "5-1",  "1-5",  None,   None,   None,   None,   None,   None,   None,   None,   None],
+    "09/06/26":    ["1-3",  "4-0",  "2-2",  "0-4",  None,   "3-1",  "0-4",  "4-0",  "2-2",  None,   None,   None,   None,   None,   None],
+    "14/06/26":    ["1-4",  "3-2",  "1-4",  "4-1",  None,   None,   "3-2",  "1-4",  None,   "3-2",  "3-2",  "2-0",  None,   None,   None],
+    "13/06":       [None,   "1-3",  "3-1",  None,   "2-2",  "2-2",  None,   "3-1",  None,   "1-3",  None,   None,   None,   None,   None],
+    "15/06":       ["2-2",  "1-3",  "3-1",  "3-1",  "2-2",  "1-3",  None,   None,   None,   None,   None,   "0-1",  "1-0",  None,   None],
+    "18/06/26":    [None,   "3-2",  "3-2",  "3-2",  "2-3",  "2-3",  "2-3",  None,   None,   None,   None,   None,   None,   "1-0",  "1-2"],
+    "22/06/26":    ["0-2",  "0-2",  "2-0",  None,   "2-0",  None,   "2-0",  "0-2",  None,   "0-2",  None,   None,   None,   None,   None],
 }
 sessions_df = pd.DataFrame(sessions_raw).set_index("Player")
 
