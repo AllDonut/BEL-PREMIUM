@@ -7,5 +7,6 @@ pg = st.navigation([
     st.Page("pages/scatter.py",        title="Scatter",           icon="📊"),
     st.Page("pages/roles.py",          title="Role Contribution", icon="🎭"),
     st.Page("pages/composite.py",      title="Composite Score",   icon="⭐"),
+    st.Page("pages/awards.py",         title="Awards",            icon="🏅"),
 ])
 pg.run()
