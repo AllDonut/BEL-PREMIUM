@@ -107,6 +107,86 @@ else:
 
     st.divider()
 
+    nba_comps = {
+        "Ningwa Limbu": [
+            ("Magic Johnson (scaled down)", 5),
+            ("Scottie Pippen", 5),
+            ("Grant Hill (prime)", 4),
+            ("Penny Hardaway", 4),
+            ("LeBron James (out of prime)", 4),
+        ],
+        "Clinton Camelo": [
+            ("Zion Williamson", 5),
+            ("Charles Barkley", 5),
+            ("Derrick Rose (prime)", 4),
+            ("Dwyane Wade", 4),
+            ("Russell Westbrook", 3),
+        ],
+        "Kanetho Sequira": [
+            ("Nikola Jokic (baby)", 5),
+            ("Tyrese Haliburton", 4),
+            ("Vlade Divac", 4),
+            ("Arvydas Sabonis", 4),
+            ("Marc Gasol", 3),
+        ],
+        "Borgers Rodriguez": [
+            ("Kawhi Leonard (baby)", 5),
+            ("Dennis Rodman", 4),
+            ("Andre Iguodala", 4),
+            ("Luol Deng", 3),
+            ("Bruce Brown", 3),
+        ],
+        "Nathan Cabral": [
+            ("Zach Randolph", 4),
+            ("David West", 4),
+            ("Draymond Green", 4),
+            ("LaMarcus Aldridge (out of prime)", 3),
+            ("Al Jefferson", 3),
+        ],
+        "Ashwin Rai": [
+            ("Allen Iverson", 5),
+            ("Damian Lillard", 5),
+            ("Jerry West", 4),
+            ("Dwyane Wade (without size)", 4),
+            ("Lou Williams", 3),
+        ],
+        "Cameron": [
+            ("Shawn Kemp", 4),
+            ("Andrei Kirilenko", 4),
+            ("Serge Ibaka (early)", 4),
+            ("Kevin Garnett (early)", 3),
+            ("Bismack Biyombo", 3),
+        ],
+        "Renick Fernandes": [
+            ("Derek Fisher", 5),
+            ("Kyle Korver", 4),
+            ("Vlade Divac", 4),
+            ("Peja Stojakovic", 3),
+            ("Boris Diaw", 3),
+        ],
+        "Mahdi Miah": [
+            ("Kendrick Perkins", 5),
+            ("Oliver Miller", 5),
+            ("Roy Hibbert", 4),
+            ("Shaquille O'Neal (very late career)", 3),
+            ("Bismack Biyombo", 3),
+        ],
+        "Savio Da Costa": [
+            ("Bruce Bowen", 4),
+            ("Nate Robinson", 4),
+            ("Muggsy Bogues", 3),
+            ("Mario Elie", 3),
+            ("Raja Bell", 3),
+        ],
+    }
+
+    if selected in nba_comps:
+        st.subheader("NBA Comparison")
+        for player, stars in nba_comps[selected]:
+            st.markdown(f"{'⭐' * stars} **{player}**")
+
+    st.divider()
+
     st.subheader("Full game log")
     log = p.sort_values("game_id", ascending=False).reset_index(drop=True)
     log.index += 1
