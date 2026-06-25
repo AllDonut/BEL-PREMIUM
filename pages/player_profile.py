@@ -108,82 +108,115 @@ else:
     st.divider()
 
     nba_comps = {
-        "Ningwa Limbu": [
-            ("Magic Johnson (scaled down)", 5),
-            ("Scottie Pippen", 5),
-            ("Grant Hill (prime)", 4),
-            ("Penny Hardaway", 4),
-            ("LeBron James (out of prime)", 4),
-        ],
-        "Clinton Camelo": [
-            ("Zion Williamson", 5),
-            ("Charles Barkley", 5),
-            ("Derrick Rose (prime)", 4),
-            ("Dwyane Wade", 4),
-            ("Russell Westbrook", 3),
-        ],
-        "Kanetho Sequira": [
-            ("Nikola Jokic (baby)", 5),
-            ("Tyrese Haliburton", 4),
-            ("Vlade Divac", 4),
-            ("Arvydas Sabonis", 4),
-            ("Marc Gasol", 3),
-        ],
-        "Borgers Rodriguez": [
-            ("Kawhi Leonard (baby)", 5),
-            ("Dennis Rodman", 4),
-            ("Andre Iguodala", 4),
-            ("Luol Deng", 3),
-            ("Bruce Brown", 3),
-        ],
-        "Nathan Cabral": [
-            ("Zach Randolph", 4),
-            ("David West", 4),
-            ("Draymond Green", 4),
-            ("LaMarcus Aldridge (out of prime)", 3),
-            ("Al Jefferson", 3),
-        ],
-        "Ashwin Rai": [
-            ("Allen Iverson", 5),
-            ("Damian Lillard", 5),
-            ("Jerry West", 4),
-            ("Dwyane Wade (without size)", 4),
-            ("Lou Williams", 3),
-        ],
-        "Cameron": [
-            ("Shawn Kemp", 4),
-            ("Andrei Kirilenko", 4),
-            ("Serge Ibaka (early)", 4),
-            ("Kevin Garnett (early)", 3),
-            ("Bismack Biyombo", 3),
-        ],
-        "Renick Fernandes": [
-            ("Derek Fisher", 5),
-            ("Kyle Korver", 4),
-            ("Vlade Divac", 4),
-            ("Peja Stojakovic", 3),
-            ("Boris Diaw", 3),
-        ],
-        "Mahdi Miah": [
-            ("Kendrick Perkins", 5),
-            ("Oliver Miller", 5),
-            ("Roy Hibbert", 4),
-            ("Shaquille O'Neal (very late career)", 3),
-            ("Bismack Biyombo", 3),
-        ],
-        "Savio Da Costa": [
-            ("Bruce Bowen", 4),
-            ("Nate Robinson", 4),
-            ("Muggsy Bogues", 3),
-            ("Mario Elie", 3),
-            ("Raja Bell", 3),
-        ],
+        "Ningwa Limbu": {
+            "picks": [
+                ("LeBron James (out of prime)", 5),
+                ("Scottie Pippen", 5),
+                ("Tracy McGrady (out of prime)", 4),
+                ("Grant Hill (prime)", 4),
+                ("Penny Hardaway", 4),
+            ],
+            "top_reason": "9.6 PPG scoring load with elite athleticism and all-round stat contributions — a dominant wing who does a bit of everything, like LeBron when his motor dips but the talent still shows.",
+        },
+        "Clinton Camelo": {
+            "picks": [
+                ("Zion Williamson", 5),
+                ("Charles Barkley", 5),
+                ("Derrick Rose (prime)", 4),
+                ("Dwyane Wade", 4),
+                ("Russell Westbrook", 3),
+            ],
+            "top_reason": "Physically the biggest and most powerful player on the court, with explosive drives and raw scoring ability. Zion is the closest match — built like a freight train, near impossible to stop in close range.",
+        },
+        "Kanetho Sequira": {
+            "picks": [
+                ("Dikembe Mutombo (with scoring)", 5),
+                ("Kevin Garnett (early)", 5),
+                ("Tyrese Haliburton", 4),
+                ("Arvydas Sabonis", 4),
+                ("Nikola Jokic (baby)", 3),
+            ],
+            "top_reason": "1.2 BPG and 2.0 SPG are the best defensive numbers in the league. Mutombo with some scoring attached is the closest NBA template — a shot-altering big who anchors the defence.",
+        },
+        "Borgers Rodriguez": {
+            "picks": [
+                ("Kawhi Leonard (baby)", 5),
+                ("Dennis Rodman (with scoring)", 5),
+                ("Andre Iguodala", 4),
+                ("Luol Deng", 3),
+                ("Bruce Brown", 3),
+            ],
+            "top_reason": "Lockdown defence, elite rebounding (11.4 RPG), and midrange shooting — quiet, efficient, and does everything needed to win. Baby Kawhi captures the two-way stopper identity before the star scoring arrived.",
+        },
+        "Nathan Cabral": {
+            "picks": [
+                ("Draymond Green", 4),
+                ("Zach Randolph", 4),
+                ("David West", 4),
+                ("LaMarcus Aldridge (out of prime)", 3),
+                ("Al Jefferson", 3),
+            ],
+            "top_reason": "High assist numbers for a big, solid rebounding, and a glue-guy presence rather than a primary scorer. Draymond is the best fit — the connective tissue player who makes the team work.",
+        },
+        "Ashwin Rai": {
+            "picks": [
+                ("Allen Iverson", 5),
+                ("Jerry West", 4),
+                ("Dwyane Wade (without size)", 4),
+                ("Damian Lillard", 4),
+                ("Lou Williams", 3),
+            ],
+            "top_reason": "Relentless shot volume and a never-stop mentality from a smaller frame. AI is the closest match — a guard who gets his points through sheer will and volume regardless of the efficiency numbers.",
+        },
+        "Cameron": {
+            "picks": [
+                ("Dennis Rodman (without motor)", 5),
+                ("Shawn Kemp", 4),
+                ("Andrei Kirilenko", 4),
+                ("Serge Ibaka (early)", 4),
+                ("Kevin Garnett (early)", 3),
+            ],
+            "top_reason": "13.7 RPG — the highest in the league — and 2.7 SPG with near zero offensive output. Rodman without the relentless energy is the perfect analogy: a rebounding and defensive presence who lets others do the scoring.",
+        },
+        "Renick Fernandes": {
+            "picks": [
+                ("Derek Fisher", 5),
+                ("Kyle Korver", 4),
+                ("Vlade Divac", 4),
+                ("Peja Stojakovic", 3),
+                ("Boris Diaw", 3),
+            ],
+            "top_reason": "A steady, low-usage role player who contributes without demanding the ball — good basketball IQ, low turnovers, keeps things ticking. Derek Fisher is the classic version of that archetype.",
+        },
+        "Mahdi Miah": {
+            "picks": [
+                ("Kendrick Perkins", 5),
+                ("Oliver Miller", 5),
+                ("Roy Hibbert", 4),
+                ("Shaquille O'Neal (very late career)", 3),
+                ("Bismack Biyombo", 3),
+            ],
+            "top_reason": "A physical presence in the paint whose value is felt through his size and intimidation rather than stats. Kendrick Perkins is the definitive example — on the court to occupy space and make life harder for everyone inside.",
+        },
+        "Savio Da Costa": {
+            "picks": [
+                ("Theo Ratliff", 4),
+                ("Eric Dampier", 4),
+                ("Bruce Bowen", 3),
+                ("Muggsy Bogues", 3),
+                ("Raja Bell", 3),
+            ],
+            "top_reason": "0 points and 0 FGM across 4 games, with contributions coming purely through hustle and defensive activity. Theo Ratliff and Eric Dampier are the closest NBA archetypes — bigs whose value was entirely off the ball.",
+        },
     }
 
     if selected in nba_comps:
         st.subheader("NBA Comparison")
-        for player, stars in nba_comps[selected]:
+        comp_data = nba_comps[selected]
+        for i, (player, stars) in enumerate(comp_data["picks"]):
             st.markdown(f"{'⭐' * stars} **{player}**")
+            if i == 0:
+                st.caption(comp_data["top_reason"])
 
     st.divider()
 
