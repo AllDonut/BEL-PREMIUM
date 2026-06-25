@@ -130,23 +130,23 @@ else:
         },
         "Kanetho Sequira": {
             "picks": [
-                ("Dikembe Mutombo (with scoring)", 5),
-                ("Kevin Garnett (early)", 5),
-                ("Tyrese Haliburton", 4),
-                ("Arvydas Sabonis", 4),
-                ("Nikola Jokic (baby)", 3),
+                ("Victor Wembanyama (baby)", 5),
+                ("Chet Holmgren", 5),
+                ("Dikembe Mutombo (with scoring)", 4),
+                ("Kevin Garnett (early)", 4),
+                ("Arvydas Sabonis", 3),
             ],
-            "top_reason": "1.2 BPG and 2.0 SPG are the best defensive numbers in the league. Mutombo with some scoring attached is the closest NBA template — a shot-altering big who anchors the defence.",
+            "top_reason": "Tallest and lankiest in the league — a shot-altering defensive presence who doesn't need the ball in his hands to impact the game, just like Wemby and Chet. Elite steal and block numbers back it up.",
         },
         "Borgers Rodriguez": {
             "picks": [
                 ("Kawhi Leonard (baby)", 5),
                 ("Dennis Rodman (with scoring)", 5),
+                ("Jrue Holiday", 5),
                 ("Andre Iguodala", 4),
                 ("Luol Deng", 3),
-                ("Bruce Brown", 3),
             ],
-            "top_reason": "Lockdown defence, elite rebounding (11.4 RPG), and midrange shooting — quiet, efficient, and does everything needed to win. Baby Kawhi captures the two-way stopper identity before the star scoring arrived.",
+            "top_reason": "Lockdown defence, elite rebounding (11.4 RPG), and midrange shooting — quiet, efficient, and does everything needed to win. Baby Kawhi captures the two-way stopper identity, and Jrue Holiday mirrors the undersized-but-strong DPOY-calibre defender who shows up when it matters.",
         },
         "Nathan Cabral": {
             "picks": [
