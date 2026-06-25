@@ -95,14 +95,25 @@ else:
     categories = ["Scoring", "Playmaking", "Rebounding", "Defending"]
     colors = ["#3266ad","#e07b39","#5a9e6f","#a855b5","#d94f4f","#2eb8c2","#c9a227","#7b6cf6","#e85d8a"]
 
+    def norm_role(col):
+        mn, mx = col.min(), col.max()
+        if mx == mn:
+            return pd.Series([50.0] * len(col), index=col.index)
+        return (col - mn) / (mx - mn) * 100
+
+    summary["scoring_norm"]    = norm_role(summary["scoring"])
+    summary["playmaking_norm"] = norm_role(summary["playmaking"])
+    summary["rebounding_norm"] = norm_role(summary["rebounding"])
+    summary["defending_norm"]  = norm_role(summary["defending"])
+
     fig_radar = go.Figure()
     for i, player in enumerate(selected_players):
         row = summary[summary["player"] == player].iloc[0]
         values = [
-            row["scoring"],
-            row["playmaking"],
-            row["rebounding"],
-            row["defending"],
+            row["scoring_norm"],
+            row["playmaking_norm"],
+            row["rebounding_norm"],
+            row["defending_norm"],
         ]
         values += [values[0]]
         cats = categories + [categories[0]]

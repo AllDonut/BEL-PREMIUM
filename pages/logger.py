@@ -60,7 +60,7 @@ else:
             rows = []
             for player in all_players:
                 s = stats[player]
-                pts = (s["fgm"] - s["threepm"]) * 1 + s["threepm"] * 2
+                pts = (s["fgm"] - s["threepm"]) * 2 + s["threepm"] * 4
                 fg_pct = round(s["fgm"] / s["fga"] * 100, 1) if s["fga"] > 0 else 0
                 three_pct = round(s["threepm"] / s["threepa"] * 100, 1) if s["threepa"] > 0 else 0
                 team = "A" if player in team_a else "B"
